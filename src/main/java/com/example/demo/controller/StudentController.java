@@ -39,12 +39,8 @@ public class StudentController {
     public String update(@PathVariable Long id,@RequestBody Student newStudent){
         Optional<Student> student=studentService.getOneStudent(id);
         if(student.isPresent()){
-            Student oldStudent=student.get();
-            oldStudent.setName(newStudent.getName());
-            oldStudent.setEmail(newStudent.getEmail());
-            oldStudent.setDob(newStudent.getDob());
-            oldStudent.setCgpa(newStudent.getCgpa());
-            studentService.insertStudent(oldStudent);
+            newStudent.setId(id);
+            studentService.insertStudent(newStudent);
             return "Updated Success";
         }
         return "Id not found";
