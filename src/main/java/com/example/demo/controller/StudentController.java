@@ -36,5 +36,14 @@ public class StudentController {
     }
 
     @PutMapping("/update/{id}")
-    public String update(@PathVariable Long id,@RequestBody )
+    public String update(@PathVariable Long id,@RequestBody Student newStudent){
+        Optional<Student> student=studentService.getOneStudent(id);
+        if(student.isPresent()){
+            Student oldStudent=student.get();
+            oldStudent.setName(newStudent.getName());
+            oldStudent.setEmail(newStudent.getEmail());
+            oldStudent.set
+
+        }
+    }
 }
