@@ -26,7 +26,7 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public Optional<Student> getById(Long id) {
+    public Optional<Student> getOneStudent(Long id) {
         return strepo.findById(id);
     }
     

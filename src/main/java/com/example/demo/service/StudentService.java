@@ -8,5 +8,5 @@ import com.example.demo.entity.Student;
 public interface StudentService {
     Student insertStudent(Student st);
     List<Student> getAllStudents();
-    Optional<Student> getById(Long id);
+    Optional<Student> getOneStudent(Long id);
 }

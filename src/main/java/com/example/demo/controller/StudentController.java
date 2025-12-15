@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -30,9 +31,10 @@ public class StudentController {
 
     @GetMapping("/get/{id}")
     public Student get(@PathVariable Long id){
-        Optional<Student> st=studentService.getById(id);
+        Optional<Student> st=studentService.getOneStudent(id);
         return st.get();
     }
 
-    @PutMapping("/update/")
+    @PutMapping("/update/{id}")
+    public String update(@PathVariable Long id,@RequestBody )
 }
