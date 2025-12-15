@@ -31,9 +31,8 @@ public class StudentController {
     }
 
     @GetMapping("/get/{id}")
-    public Student get(@PathVariable Long id){
-        Optional<Student> st=studentService.getOneStudent(id);
-        return st.get();
+    public Optional<Student> get(@PathVariable Long id){
+        return studentService.getOneStudent(id);        
     }
 
     @PutMapping("/update/{id}")
