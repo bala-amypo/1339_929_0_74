@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -52,6 +53,11 @@ public class StudentController {
 
     @DeleteMapping("/del/{id}")
     public String deleteStudent(@PathVariable Long id){
-        
+        Optional<Student> student=studentService.getOneStudent(id);
+        if(student.isPresent()){
+            studentService.deleteStudent(id);
+            return "Deleted Success";
+        }
+        return "Id Not Found";
     }
 }
