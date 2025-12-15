@@ -13,12 +13,12 @@ public class LocationServiceImpl implements LocationService {
     @Autowired
     LocationRepository lrp;
     public Location createLocation(Location location){
-        if(location.getLatitude>90){
-            throw new IllegalArgumentExeption("latitude")
+        if(location.getLatitude()>90){
+            throw new IllegalArgumentException("latitude");
         }
         return lrp.save(location);
     }
     public List<Location> getAllLocations(){
-
+        return lrp.findAll();
     }
 }
