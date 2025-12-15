@@ -30,7 +30,9 @@ public class StudentController {
 
     @GetMapping("/get/{id}")
     public Student get(@PathVariable Long id){
-        Optional<Student> st=
-        return ;
+        Optional<Student> st=studentService.getById(id);
+        return st.get();
     }
+
+    @PutMapping("/update/")
 }
