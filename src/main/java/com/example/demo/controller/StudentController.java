@@ -42,8 +42,16 @@ public class StudentController {
             Student oldStudent=student.get();
             oldStudent.setName(newStudent.getName());
             oldStudent.setEmail(newStudent.getEmail());
-            oldStudent.set
-
+            oldStudent.setDob(newStudent.getDob());
+            oldStudent.setCgpa(newStudent.getCgpa());
+            studentService.insertStudent(oldStudent);
+            return "Updated Success";
         }
+        return "Id not found";
+    }
+
+    @DeleteMapping("/del/{id}")
+    public String deleteStudent(@PathVariable Long id){
+        
     }
 }
