@@ -16,17 +16,17 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public Student insertStudent(Student st) {
-        
+        return strepo.save(st);
     }
 
     @Override
     public List<Student> getAllStudents() {
-        
+        return strepo.findAll();
     }
 
     @Override
     public Student getById(Long id) {
-        
+        return strepo.getById(id);
     }
     
 }
