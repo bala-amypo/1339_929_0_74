@@ -1,5 +1,7 @@
 package com.example.demo.service.impl;
 
-public class LocationServiceImpl {
+import com.example.demo.service.LocationService;
+@Service
+public class LocationServiceImpl implements LocationService {
     
 }

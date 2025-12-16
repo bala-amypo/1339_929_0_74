@@ -1,5 +1,8 @@
 package com.example.demo.service;
 
-public interface RouteOptimizationResultService {
+import com.example.demo.entity.RouteOptimizationResult;
 
+public interface RouteOptimizationResultService {
+    RouteOptimizationResult optimizeRoute(Long shipmentId);
+    RouteOptimizationResult getResult(Long resultId);
 }
