@@ -4,5 +4,7 @@ import jakarta.persistence.Entity;
 
 @Entity
 public class RouteOptimizationResult {
+    private Long id;
+    private Shipment shipment;
     
 }
