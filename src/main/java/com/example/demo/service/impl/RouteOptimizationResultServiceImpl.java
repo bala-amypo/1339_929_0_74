@@ -3,10 +3,10 @@ package com.example.demo.service.impl;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.entity.RouteOptimizationResult;
-import com.example.demo.service.RouteOptimizationResultService;
+import com.example.demo.service.RouteOptimizationService;
 
 @Service
-public class RouteOptimizationResultServiceImpl implements RouteOptimizationResultService {
+public class RouteOptimizationResultServiceImpl implements RouteOptimizationService {
 
 	@Override
 	public RouteOptimizationResult optimizeRoute(Long shipmentId) {
