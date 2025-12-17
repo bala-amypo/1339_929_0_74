@@ -15,4 +15,5 @@ public class AuthController {
     public void reg(){
         
     }
+    @PutMapping
 }
