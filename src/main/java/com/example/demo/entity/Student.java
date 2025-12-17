@@ -8,4 +8,5 @@ public class Student {
     private String dept;
     private LocalDate dob;
     private float cgpa;
+    
 }
