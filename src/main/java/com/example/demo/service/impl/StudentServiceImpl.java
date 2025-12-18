@@ -19,4 +19,8 @@ public class StudentServiceImpl implements StudentService{
     public List<Student> getAllStudents(){
         return stdrepo.findAll();
     }
+    @Override
+    public Student getById(Long id){
+        stdrepo.
+    }
 }
