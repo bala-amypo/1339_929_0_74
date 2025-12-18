@@ -16,12 +16,14 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.demo.entity.Student;
 import com.example.demo.service.StudentService;
 
+import jakarta.validation.Valid;
+
 @RestController
 public class StudentController {
     @Autowired
     StudentService stdser;
     @PostMapping("/addStudent")
-    public Student addStudent(@RequestBody Student st){
+    public Student addStudent(@Valid @RequestBody Student st){
         return stdser.poststudent(st);
     }
     @GetMapping("/getall")
