@@ -7,12 +7,15 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 @Entity
 public class Student {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
-    @NotNull(message="Name should n")
+    @NotEmpty(message="Name should not be null")
+
     private String name;
     private String dept;
     private LocalDate dob;
