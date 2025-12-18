@@ -44,6 +44,9 @@ public class StudentServiceImpl implements StudentService{
             stdrepo.deleteById(id);
             return "Student Deleted Successfully";
         }
+        else{
+            return "Student with ID "+id+" not found";
+        }
 
     }
 }
