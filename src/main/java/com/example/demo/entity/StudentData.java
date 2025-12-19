@@ -14,6 +14,6 @@ public class StudentData {
     private String name;
     private String address;
     private Long phone;
-    // @OneToOne(mappedBy="std")
-    // private Idcard idc;
+    @OneToOne(mappedBy="std")
+    private Idcard idc;
 }
