@@ -1,5 +1,7 @@
 package com.example.demo.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -15,5 +17,6 @@ public class StudentData {
     private String address;
     private Long phone;
     @OneToOne(mappedBy="std")
+    @JsonIgnore
     private Idcard idc;
 }
